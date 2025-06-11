@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .card-custom {
+            background-color: #222;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            text-align: center;
+        }
+        .highlight {
+            color: #FFD700;
+            font-style: italic;
+            font-weight: bold;
+        }
+        .icon {
+            color: #FFD700;
+            font-size: 1.2rem;
+        }
+        .btn-custom {
+            background-color: #FFD700;
+            color: black;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+            .hero {
+            background: url('https://source.unsplash.com/1600x900/?theater,stage') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .gallery .col-md-4 {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery .col-md-4:hover img {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .gallery .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .gallery .col-md-4:hover .overlay {
+            opacity: 1;
+        }
+
+        .gallery .overlay h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .contact-card {
+      background-color: #1e1e1e;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+    }
+    .form-label {
+      color: #ccc;
+    }
+    .form-control {
+      background-color: #2a2a2a;
+      border: 1px solid #444;
+      color: #fff;
+    }
+    .form-control::placeholder {
+      color: #888;
+    }
+    .form-control:focus {
+      background-color: #2a2a2a;
+      border-color: #6366f1;
+      box-shadow: none;
+      color: #fff;
+    }
+    .btn-submit {
+      background-color: #6366f1;
+      color: white;
+      border: none;
+    }
+    .btn-submit:hover {
+      background-color: #4f46e5;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Brand/Logo -->
+            <a class="navbar-brand" href="#">TicketBooking</a>
+
+            <!-- Toggle Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Search Form -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search Events" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+
+                <!-- Login/Register Links -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+  
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="AA1uU9CK.jpeg" alt="slaar" class="d-block w-100 " height="600px">
+      </div>
+      <div class="carousel-item">
+        <img src="dragon12102024m2.jpg" alt="bahubali 2" class="d-block w-100" height="600px">
+      </div>
+      <div class="carousel-item">
+        <img src="Good-Bad-Ugly-UA16-Tamil-2D.webp" alt="GBU" class="d-block w-100" height="600px">
+      </div>
+    </div>
+  
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <header class="hero">
+    <div class="container">
+        <h1>Welcome to Theater Ticket Booking</h1>
+        <p>Your one-stop destination for hassle-free theater experiences.</p>
+    </div>
+</header>
+
+<section class="container my-5">
+    <h2 class="text-center mb-4">Who We Are</h2>
+    <p class="text-center">We are a dedicated platform that provides seamless ticket booking for theaters across the country. With our easy-to-use interface and secure payment options, we ensure a smooth and enjoyable experience for our customers.
+    We are a passionate team dedicated to bringing you the best theater experiences with ease and convenience. Our mission is to revolutionize the way people book and enjoy theater shows by providing a seamless online platform.
+    With years of experience in the entertainment industry, we understand the importance of hassle-free ticket booking. Our platform connects theater enthusiasts with the best performances, ensuring you never miss out on your favorite shows.
+    From Broadway classics to local productions, we provide access to a diverse range of performances. We believe that theater should be accessible to everyone, and our user-friendly system, combined with exclusive deals, makes that possible.</p>
+</section>
+
+<section class="container my-5">
+    <h2 class="text-center mb-4">Why Choose Us?</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h4>Easy Booking</h4>
+            <p>Book your favorite shows with just a few clicks.</p>
+        </div>
+        <div class="col-md-4">
+            <h4>Secure Payments</h4>
+            <p>Your transactions are protected with top-notch security.</p>
+        </div>
+        <div class="col-md-4">
+            <h4>Exclusive Deals</h4>
+            <p>Get special discounts and offers on your bookings.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5">
+    <h2 class="text-center mb-4">Meet Our Team</h2>
+    <div class="row text-center">
+        <div class="col-md-4 team-member">
+            <img src="photo-1592009309602-1dde752490ae.jpeg" alt="Team Member">
+            <h5>Boss</h5>
+            <p>Founder & CEO</p>
+        </div>
+        <div class="col-md-4 team-member">
+            <img src="portrait-men-004.jpg" alt="Team Member">
+            <h5>Jefflin sujin</h5>
+            <p>Chief Marketing Officer</p>
+        </div>
+        <div class="col-md-4 team-member">
+            <img src="8b3071438a54a0a194193f3ccb350560.jpg" alt="Team Member">
+            <h5>abrin kerosin</h5>
+            <p>Lead Developer</p>
+        </div>
+    </div>
+</section>
+<div class="container gallery my-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="position-relative">
+                <img src="download.jpeg" alt="Canteen" class="img-fluid">
+                <div class="overlay">
+                    <h3>Canteen</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="position-relative">
+                <img src="download (1).jpeg" alt="Screen 2" class="img-fluid">
+                <div class="overlay">
+                    <h3>Screen 2</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="position-relative">
+                <img src="download (2).jpeg" alt="Snack bar" class="img-fluid">
+                <div class="overlay">
+                    <h3>Snack bar</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="position-relative">
+                <img src="download (3).jpeg" alt="Screen 4" class="img-fluid">
+                <div class="overlay">
+                    <h3>Screen 4</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="position-relative">
+                <img src="pvp-square-moghalraja-puram-vijayawada-malls-ilnct2fm1n.avif" alt="Image 5" class="img-fluid">
+                <div class="overlay">
+                    <h3>Out Look</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="position-relative">
+                <img src="pvr-mall-2.jpg" alt="Entrance to screen" class="img-fluid">
+                <div class="overlay">
+                    <h3>Entrance</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" id="contact">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="contact-card">
+          <h2 class="text-center mb-4 text-light">Contact Us</h2>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-submit py-2">Send Message</button>
+            </div>
+          </form>
+          <p class="text-center text-muted mt-4 mb-0">We'll get back to you soon!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-md-left">
+      <div class="row text-md-left">
+        
+        <!-- Company Info -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">TicketNow</h5>
+          <p>Book your tickets easily and securely for concerts, movies, and events. Enjoy seamless experiences with TicketNow.</p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+          <p><a href="#" class="text-white text-decoration-none">Home</a></p>
+          <p><a href="#" class="text-white text-decoration-none">Events</a></p>
+          <p><a href="#" class="text-white text-decoration-none">Booking</a></p>
+          <p><a href="#" class="text-white text-decoration-none">Contact</a></p>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+          <p><i class="bi bi-house-door-fill me-2"></i> 123 Main Street, City, Country</p>
+          <p><i class="bi bi-envelope-fill me-2"></i> support@ticketnow.com</p>
+          <p><i class="bi bi-phone-fill me-2"></i> +1 234 567 890</p>
+        </div>
+  
+        <!-- Social Links -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3 text-center">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Follow Us</h5>
+          <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="btn btn-outline-light btn-floating m-1"><i class="bi bi-youtube"></i></a>
+        </div>
+  
+      </div>
+  
+      <!-- Copyright -->
+      <hr class="mb-4">
+      <div class="row align-items-center">
+        <div class="col-md-8 col-lg-8">
+          <p class="text-center text-md-start">© 2025 TicketNow. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
